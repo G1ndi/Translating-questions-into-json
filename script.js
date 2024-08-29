@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const questions = JSON.parse(localStorage.getItem("questions")) || [];
 
+    // Обновление счетчика количества вопросов
+    document.getElementById("questionCount").textContent = `(${questions.length})`;
+
     questions.forEach((questionData, index) => {
       const questionCard = document.createElement("div");
       questionCard.classList.add("card");
